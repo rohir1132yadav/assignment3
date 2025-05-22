@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Sydney Harbor Night Festival",
+    "date": "June 15, 2025",
+    "location": "Sydney Harbor",
+    "description": "Experience the magic of Sydney Harbor at night",
+    "url": "https://example.com/event1"
+  },
+  {
+    "title": "Australian Food & Wine Expo",
+    "date": "May 30, 2025",
+    "location": "Sydney Convention Centre",
+    "description": "Discover Australia's finest cuisines and wines",
+    "url": "https://example.com/event2"
+  },
+  {
+    "title": "Tech Innovation Summit",
+    "date": "June 5, 2025",
+    "location": "Sydney Tech Hub",
+    "description": "Join the biggest tech conference in Sydney",
+    "url": "https://example.com/event3"
+  }
+]
