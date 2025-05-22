@@ -1,9 +1,13 @@
 from flask import Flask, jsonify, render_template, request, redirect
+from flask_wtf.csrf import CSRFProtect
 from apscheduler.schedulers.background import BackgroundScheduler
 from scraper import EventScraper
 import os
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-secret-key-here')  # Change this in production
+csrf = CSRFProtect(app)
+
 scraper = EventScraper()
 
 # Initialize scheduler
@@ -35,6 +39,7 @@ def get_events():
         }])
 
 @app.route('/capture-email', methods=['POST'])
+@csrf.exempt  # If you want to exempt this route from CSRF protection
 def capture_email():
     try:
         email = request.form.get('email')
